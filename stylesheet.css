@@ -1,0 +1,215 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Dancing+Script:wght@400..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Charm', cursive;
+
+}
+
+/* Body Styling */
+body {
+    background-color: #FAC6B7; /* Lighter Peach */
+    color: #333;
+    line-height: 1.6;
+    padding: 0 200px;
+
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #F4927D; /* Base Coral */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 3px solid #D87A63; /* Darker Coral */
+}
+
+nav .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: white;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav .nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    transition: background 0.3s;
+    font-weight: bold;
+}
+
+nav .nav-links a:hover {
+    background-color: #D87A63; /* Darker Coral */
+    border-radius: 5px;
+}
+
+/* Welcome Section */
+.welcome {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #FAC6B7; /* Lighter Peach */
+    margin: 20px 0;
+    border-radius: 8px;
+    border: 2px solid #D87A63; /* Darker Coral */
+}
+
+/* Recipes Section */
+.recipes-section {
+    padding: 20px 0;
+}
+
+.recipes-section h2 {
+    text-align: center;
+    color: #D87A63; /* Darker Coral */
+}
+
+.recipes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.recipe-card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    border: 2px solid #F4927D; /* Base Coral */
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+    background-color: #FAC6B7; /* Lighter Peach */
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: #F4927D; /* Base Coral */
+    padding: 30px 20px;
+    text-align: center;
+    margin: 20px 0;
+    border-radius: 8px;
+    border: 2px solid #D87A63; /* Darker Coral */
+}
+
+.contact-section h2 {
+    color: white;
+}
+
+.contact-section form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.contact-section input[type="email"] {
+    padding: 10px;
+    border: 1px solid #D87A63; /* Darker Coral */
+    border-radius: 4px;
+    width: 250px;
+    font-family: 'Arial', sans-serif; /* For readability in the input */
+}
+
+.contact-section button {
+    background-color: #D87A63; /* Darker Coral */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s;
+    font-weight: bold;
+}
+
+.contact-section button:hover {
+    background-color: #F4927D; /* Base Coral */
+}
+
+/* Success Message */
+#formMessage {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #D87A63; /* Darker Coral */
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    /* Adjust for large screens (tablets and smaller laptops) */
+    body {
+        padding: 0 100px; /* Adjust side padding */
+    }
+
+    .recipes-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust grid layout for larger screens */
+    }
+}
+
+@media (max-width: 900px) {
+    /* Adjust for medium screens (small tablets and large phones) */
+    nav .nav-links {
+        gap: 10px;
+    }
+
+    .recipes-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust grid layout */
+    }
+
+    .contact-section input[type="email"] {
+        width: 220px; /* Adjust the width of the input box */
+    }
+
+    .contact-section button {
+        padding: 8px 16px; /* Adjust button size */
+    }
+}
+
+@media (max-width: 600px) {
+    /* Adjust for mobile screens */
+    body {
+        padding: 0 20px; /* Reduced padding for mobile */
+    }
+
+    nav .nav-links {
+        flex-direction: column;
+        gap: 15px; /* Stack navigation items */
+        text-align: center; /* Center align the nav items */
+    }
+
+    .recipes-grid {
+        grid-template-columns: 1fr; /* Single column layout for recipes */
+    }
+
+    .contact-section input[type="email"] {
+        width: 100%; /* Full-width input */
+    }
+
+    .contact-section button {
+        width: 100%; /* Full-width button */
+        padding: 10px; /* Larger padding for better touch interaction */
+    }
+}

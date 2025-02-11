@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick & Healthy Recipes</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="java.js" ></script>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav>
+    <div class="logo">HealthyBites 🍏</div>
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#recipes">Recipes</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- Welcome Section -->
+<section id="home" class="welcome">
+    <h1>Welcome to Quick & Healthy Recipes!</h1>
+    <p>Your go-to place for simple, nutritious meals for every day.Discover delicious meals that are easy to prepare and perfect for everyday cooking.</p>
+</section>
+
+<!-- Recipes Section -->
+<section id="recipes" class="recipes-section">
+    <h2>Our Quick & Healthy Recipes</h2>
+    <div class="recipes-grid">
+        <!-- Recipe Cards -->
+        <div class="recipe-card">
+            <img src="breakfast.jpeg" alt="Breakfast">
+            <h3>Healthy Breakfast</h3>
+            <p>Start your day with energy-boosting meals. Smoothie Bowl with Fruits, Nuts and Seeds on Top.</p>
+        </div>
+
+        <div class="recipe-card">
+            <img src="lunch.webp" alt="Lunch">
+            <h3>Light Lunch</h3>
+            <p>Delicious and filling meals to power your afternoon. Hummus with black olives, grilled pita crackers, cucumber slices, and tomato wedges, sprinkled with herbs.</p>
+        </div>
+
+        <div class="recipe-card">
+            <img src="pexels-photo-5041491.jpeg" alt="Dinner">
+            <h3>Quick Dinner</h3>
+            <p>Wholesome dinners that are easy to prepare. A crispy fried fish, seasoned brown rice, fried plantains, fresh lettuce, tomato, onion salad, and lime wedges. </p>
+        </div>
+
+        <div class="recipe-card">
+            <img src="snack.jpeg" alt="Snacks">
+            <h3>Healthy Snacks</h3>
+            <p>Nutritious snacks for in-between meals. Three layered smoothie parfaits in glasses, topped with fresh kiwi, blackberries, and a strawberry, along with coconut flakes and granola.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Meal Plan Sign-Up Form -->
+<section id="contact" class="contact-section">
+    <h2>Sign Up for Weekly Meal Plans</h2>
+    <form id="mealPlanForm">
+        <input type="email" id="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+    </form>
+    <p id="formMessage"></p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
